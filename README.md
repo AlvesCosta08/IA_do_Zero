@@ -25,14 +25,38 @@ Este projeto implementa um **modelo de regressão linear completamente do zero**
 
 ## 🏗️ Arquitetura do Projeto
 
-´´
 projeto_ia_alves/
-├── .env # 🔧 Configurações externas
-├── main.py # 🚀 Ponto de entrada: gera dados, treina, salva
-├── config.py # ⚙️ Carrega variáveis do .env
-├── model.py # 🧠 Implementação do modelo (neurônio, treino, predição)
-├── requirements.txt # 📦 Dependências
-├── modelo_salvo.pkl # 💾 Modelo treinado (salvo com pickle)
-├── resultado_modelo.png # 📊 Gráfico gerado automaticamente
-└── README.md # 📖 Este arquivo
-´´
+├── .env                   # 🔧 Configurações externas
+├── main.py                # 🚀 Ponto de entrada: gera dados, treina, salva
+├── config.py              # ⚙️ Carrega variáveis do .env
+├── model.py               # 🧠 Implementação do modelo (neurônio, treino, predição)
+├── requirements.txt       # 📦 Dependências
+├── modelo_salvo.pkl       # 💾 Modelo treinado (salvo com pickle)
+├── resultado_modelo.png   # 📊 Gráfico gerado automaticamente
+└── README.md              # 📖 Este arquivo
+
+
+
+---
+
+
+---
+
+## 🔧 Configurações (via `.env`)
+
+Todas as configurações são centralizadas no arquivo `.env`, permitindo ajustes sem alterar o código.
+
+```env
+# Configurações do modelo
+EPOCAS=500
+TAXA_APRENDIZADO=0.001
+TAMANHO_DADOS=100
+RUIDO=1.0
+
+# Controle de execução
+PLOTAR_GRAFICO=true
+VERBOSE=true
+SEED=42
+
+# Caminhos
+MODELO_SAVE_PATH=modelo_salvo.pkl
